@@ -1,0 +1,17 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "git@github.com:codechecks/docs.git",
+  "author": "Chris Kaczor <chris@kaczor.io>",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn format",
+    "test:fix": "yarn format:fix",
+    "format": "prettier --list-different '**/*.{ts,json,md,gql}'",
+    "format:fix": "prettier --write '**/*.{ts,json,md,gql}'"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
+}
