@@ -23,7 +23,7 @@ If you want to get in, please contact us at hello@codechecks.io
 Expect more docs soon...
 
 1. [Getting started](getting-started.md)
-1. [How does it work?](#)
+1. [How does it work?](how-does-it-work.md)
 1. [Check development](#)
    1. [Developing reusable checks](#)
    1. [Testing checks](#)

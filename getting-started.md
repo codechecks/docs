@@ -6,7 +6,7 @@ First of all, contact us at hello@codechecks.io to get your secret code, needed 
 project.
 
 Install our Github app using this link:
-https://github.com/organizations/codechecks/settings/apps/codechecks/installations Please install it
+https://github.com/apps/codechecks Please install it
 only on repos that you really need (just for now).
 
 In this mini tutorial we assume that you develop frontend app so we want to watch how build size is
