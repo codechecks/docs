@@ -5,9 +5,8 @@
 First of all, contact us at hello@codechecks.io to get your secret code, needed to set up the
 project.
 
-Install our Github app using this link:
-https://github.com/apps/codechecks Please install it
-only on repos that you really need (just for now).
+Install our Github app using this link: https://github.com/apps/codechecks Please install it only on
+repos that you really need (just for now).
 
 In this mini tutorial we assume that you develop frontend app so we want to watch how build size is
 changing between PRs. We can use already existing codecheck:
@@ -51,4 +50,5 @@ https://github.com/OasisDEX/eth2dai/blob/4bc1606dfbe0f002261b24fefc0a5c47c0cd950
 To run codehecks simple do `yarn codechecks`.
 
 Make sure to add `CC_SECRET` environment variable to your CI secrets. That's it! Push your changes,
-create PR and see how we measure build size. Remeber, this is one of the simplest codechecks, imagine all the possibilities! 🔥
+create PR and see how we measure build size. Remeber, this is one of the simplest codechecks,
+imagine all the possibilities! 🔥

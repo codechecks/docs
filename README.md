@@ -3,18 +3,22 @@
 Open source platform for code review automation.
 
 With Codechecks you can replace tools like:
+
 - [BundleWatch](https://bundlewatch.io/#/)
 - [CodeCov](https://codecov.io/)
 
 and build even more cool stuff:
-- visual regression 
+
+- visual regression
 - type coverage checking for typescript projects
-- deployments per commits 
+- deployments per commits
 - performance tracking
 
 [Check out what's already build](https://github.com/codechecks)
 
-Best part: everything is open source and checks run in userland (your CI) meaning you can implement totally new ideas without any backend changes — it's just JavaScript. API component is general enough to fit lots of different use cases.
+Best part: everything is open source and checks run in userland (your CI) meaning you can implement
+totally new ideas without any backend changes — it's just JavaScript. API component is general
+enough to fit lots of different use cases.
 
 **We are in closed beta**
 
@@ -22,9 +26,13 @@ If you want to get in, please contact us at hello@codechecks.io
 
 Expect more docs soon...
 
+## Contents
+
 1. [Getting started](getting-started.md)
 1. [How does it work?](how-does-it-work.md)
-1. [Check development](#)
-   1. [Developing reusable checks](#)
-   1. [Testing checks](#)
+1. [How to build X?](how-to-build-X.md)
+1. [Configuration — codechecks.json/ts/js](configuration.md)
+1. Checks (plugins) development
+   1. [Developing reusable checks](checks-development.md)
+   1. [Testing checks](testing-checks.md)
 1. [Roadmap](#)
