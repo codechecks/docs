@@ -14,7 +14,9 @@ https://github.com/codechecks/build-size-watcher
 
 Let's start with installing deps:
 
-- yarn add --dev @codechecks/client @codechecks/build-size-watcher
+```sh
+yarn add --dev @codechecks/client @codechecks/build-size-watcher
+```
 
 Now, let's create `codechecks.json` file which allows to declaratively configure multiple checks.
 Note that there are also other ways to use codechecks, for example you can create codechecks.ts (or

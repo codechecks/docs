@@ -5,7 +5,7 @@ In this section we will provide high level overview how to build useful stuff us
 ### Build size tracking
 
 1. Measure size of files that you're interested in (just grab some lib from NPM or use `fs.stat` ).
-   We threat that value as an artifact.
+   We treat that value as an artifact.
 1. Save value to Storage API for **current** commit.
 1. Get previously saved value for **base** branch from Storage API.
 1. Compare these values to get information how build size changed.

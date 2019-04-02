@@ -33,6 +33,7 @@ Expect more docs soon...
 1. [How to build X?](how-to-build-X.md)
 1. [Configuration — codechecks.json/ts/js](configuration.md)
 1. Checks (plugins) development
-   1. [Developing reusable checks](checks-development.md)
-   1. [Testing checks](testing-checks.md)
-1. [Roadmap](#)
+   1. Developing reusable checks
+   1. Testing checks
+1. Client API reference
+1. Roadmap
