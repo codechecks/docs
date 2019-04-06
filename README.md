@@ -35,6 +35,6 @@ Expect more docs soon...
    1. Developing reusable checks
    1. Testing checks
 1. [How to build X?](how-to-build-X.md)
-1. Client API reference
+1. [Client API reference](client-api.md)
 1. [FAQ](faq.md)
-1. Roadmap
+1. [Roadmap](roadmap.md)
