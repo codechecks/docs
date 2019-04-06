@@ -4,7 +4,10 @@
 
 DangerJS is a library, codechecks is a platform. This means many things but most importantly
 DangerJS lacks "memory", you can't compare things that happened on the other commit. This is solved
-by Storage API in codechecks where you upload any artifacts so you can easy access them later.
+by Storage API in codechecks where you upload any artifacts so you can easy access them later. Using
+codechecks you can do "simple" dangerjs style checks like if file package.json was modified in this
+PR fail the build but you can do complicated stuff like: calculate visual difference betweeen
+screenshots from base and head branches.
 
 Another issue is user onboarding process, we provide already existing GitHub app which makes
 onboarding process easy and familiar to our users. You install GitHub app on your repos, you copy

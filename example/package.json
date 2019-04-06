@@ -1,0 +1,49 @@
+{
+  "name": "@codechecks/commit-deployment",
+  "description": "Ship every code change that you make",
+  "keywords": [
+    "commit-deploy",
+    "deployment",
+    "continuous deployment",
+    "codechecks"
+  ],
+  "repository": "codechecks/commit-deployment",
+  "author": "Chris Kaczor <chris@kaczor.io>",
+  "version": "0.0.4",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./lib && tsc",
+    "format": "prettier --list-different '**/*.{ts,json,md, gql}'",
+    "format:fix": "prettier --write '**/*.{ts,json,md,gql}'",
+    "lint": "yarn format",
+    "lint:fix": "yarn format:fix",
+    "test:unit": "jest",
+    "test:watch": "jest --watch",
+    "test": "yarn lint && yarn test:unit",
+    "test:fix": "yarn lint:fix && yarn test:unit",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@codechecks/client": "^0.0.52",
+    "jest": "^23.6.0",
+    "mock-fs": "^4.8.0",
+    "prettier": "^1.15.3"
+  },
+  "peerDependencies": {
+    "@codechecks/client": "^0.0.48"
+  },
+  "dependencies": {
+    "bytes": "^3.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
