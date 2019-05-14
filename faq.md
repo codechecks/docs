@@ -1,5 +1,10 @@
 # FAQ
 
+## Q: Does it work with forks?
+
+Yes! Forks are seamlessly supported, this feature is quite experimental right now but definitely
+working!
+
 ## Q: How does codechecks relate to DangerJS?
 
 DangerJS is a library, codechecks is a platform. This means many things but most importantly

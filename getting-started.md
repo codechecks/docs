@@ -1,12 +1,23 @@
 # Getting started
 
-**Note: we are in close beta**
+**Note: we are in close beta — some APIs WILL change**
 
-First of all, contact us at hello@codechecks.io to get your secret code, needed to set up the
-project.
+First of all, you need to install Github CodeChecks app on repositories that you're interested using
+with CC.
 
-Install our Github app using this link: https://github.com/apps/codechecks Please install it only on
-repos that you really need (just for now).
+1. Log into our [web application](https://app.codechecks.io/) using Github.
+2. Click "Add new project" button
+3. You will be redirected back into Github interface where you need to select appropriate
+   repositories.
+4. Once done you should be able to see all repositories within our app (if not please refresh). Note
+   that in the right top corner you can switch between orgs.
+5. Copy secret using "copy" button and paste it as secret environment inside your CI interface:
+
+```
+CC_SECRET=COPIED SECRET
+```
+
+For now only CircleCI is supported.
 
 In this mini tutorial we assume that you develop frontend app so we want to watch how build size is
 changing between PRs. We can use already existing codecheck:
