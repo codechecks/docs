@@ -40,6 +40,6 @@ were never done before like for example type coverage tracking in TypeScript pro
 
 Our whole platform is open source. You can use it and run on your own servers and never pay us any
 cent for this. But to create sustainable development model (ship new features, write new official
-checks, maintain already created ones) we provide SASS product available at codechecks.io.
+checks, maintain already created ones) we provide SAAS product available at codechecks.io.
 codechecks.io is 100% free for any open source projects. We charge only for private repositories. We
 also provide consultancy services and premium support for self hosted instances for additional fees.
