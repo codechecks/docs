@@ -16,7 +16,7 @@ export class Client {
   report(report: CodeChecksReport): Promise<void>;
   success(report: CodeChecksReportBody): Promise<void>;
   failure(report: CodeChecksReportBody): Promise<void>;
-  
+
   isPr(): boolean;
 
   getArtifactLink(path: string): string;

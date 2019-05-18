@@ -113,3 +113,8 @@ this project are part of `/example` dir.
 
 You can find more complicated example here:
 https://github.com/codechecks/build-size-watcher/tree/master/src/__tests__
+
+## Debugging
+
+For compatibility with codechecks client, to provide debug logs use `debug` package with
+`codechecks:YOUR_CHECK_NAME` namespace.
