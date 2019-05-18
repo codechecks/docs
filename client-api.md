@@ -5,14 +5,20 @@
 ```typescript
 export class Client {
   readonly context: ExecutionContext;
+
   getValue<T>(name: string): Promise<T | undefined>;
   saveValue(name: string, value: any): Promise<void>;
-  getCollection(name: string, destinationPath: string): Promise<void>;
-  saveCollection(name: string, directoryPath: string): Promise<void>;
+  getDirectory(name: string, destinationPath: string): Promise<void>;
+  saveDirectory(name: string, directoryPath: string): Promise<void>;
+  getFile(name: string, destinationPath: string): Promise<void>;
+  saveFile(name: string, filePath: string): Promise<void>;
+
   report(report: CodeChecksReport): Promise<void>;
   success(report: CodeChecksReportBody): Promise<void>;
   failure(report: CodeChecksReportBody): Promise<void>;
+  
   isPr(): boolean;
+
   getArtifactLink(path: string): string;
   getPageLink(dirPath: string, filenamePath?: string): string;
 }
@@ -74,15 +80,25 @@ undefined when no value was saved.
 
 Save JSON value with a given name for **current** commit.
 
-### getCollection(name: string, destinationPath: string): Promise<void>;
+### getDirectory(name: string, destinationPath: string): Promise<void>;
 
-Get collection (directory of files) with a given name for **base** branch and save all of them to
+Get directory (set of files) with a given name for **base** branch and save all of them to
 destinationPath. `destinationPath` needs to be absolute path (for now).
 
-### saveCollection(name: string, directoryPath: string): Promise<void>;
+### saveDirectory(name: string, directoryPath: string): Promise<void>;
 
-Saves collection (directory of files) with a given name places in `directoryPath` for \*current\*\*
-commit. `destinationPath` needs to be absolute path (for now).
+Save a directory (set of files) placed in `directoryPath` for \*current\*\* commit. All files will
+be saved under the common `name`. Nested files will be saved as well. `destinationPath` needs to be
+absolute path (for now).
+
+### getFile(name: string, destinationPath: string): Promise<void>;
+
+Get a single file with a given name for **base** branch and save it locally.
+
+### saveFile(name: string, filePath: string): Promise<void> {
+
+Save a single file placed in `directoryPath` for \*current\*\* commit and use `name` as a name.
+`filePath` needs to be absolute path.
 
 ### report(report: CodeChecksReport): Promise<void>;
 
@@ -131,4 +147,4 @@ Get link to the page artifact for **current commit**. Difference between `getArt
 this link will be pointing to a URL without path component for example:
 `https://commitsha--path/artifacts.codechecks.io/filenamePath` This works because `dirPath` and
 commit sha is encoded into subdomain part. It's very useful when hosting SPA with custom routing. In
-future we might support here custom redirects to improve it even more.
+the future we might support here custom redirects to improve it even more.
