@@ -20,8 +20,6 @@ Best part: everything is open source and checks run in userland (your CI) meanin
 totally new ideas without any backend changes — it's just JavaScript. API component is general
 enough to fit lots of different use cases.
 
-**We are in closed beta**
-
 If you want to get in, please contact us at hello@codechecks.io
 
 Expect more docs soon...
