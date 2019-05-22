@@ -1,9 +1,9 @@
 # Getting started
 
-**Note: we are in close beta — some APIs WILL change**
-
 First of all, you need to install Github CodeChecks app on repositories that you're interested using
 with CC.
+
+![Codechecks App](/images/getting-started/app.png)
 
 1. Log into our [web application](https://app.codechecks.io/) using Github.
 2. Click "Add new project" button
@@ -20,7 +20,7 @@ CC_SECRET=COPIED SECRET
 For now only CircleCI is supported.
 
 In this mini tutorial we assume that you develop frontend app so we want to watch how build size is
-changing between PRs. We can use already existing codecheck:
+changing between PRs. Already existing codecheck does exactly this:
 https://github.com/codechecks/build-size-watcher
 
 Let's start with installing deps:
@@ -29,39 +29,39 @@ Let's start with installing deps:
 yarn add --dev @codechecks/client @codechecks/build-size-watcher
 ```
 
-Now, let's create `codechecks.json` file which allows to declaratively configure multiple checks.
-Note that there are also other ways to use codechecks, for example you can create codechecks.ts (or
-js) file and execute arbitrary code (including other codechecks) and access API directly.
+Now, let's create `codechecks.yml` (json is supported as well) file which is used to declaratively
+configure multiple checks. Note that there are also other ways to use codechecks, for example you
+can create codechecks.ts (or js) file and execute arbitrary code (including other codechecks) and
+access API directly.
 
-`codechecks.json`:
+`codechecks.yml`:
 
-```json
-{
-  "checks": [
-    {
-      "name": "build-size-watcher",
-      "options": {
-        "gzip": false,
-        "files": [
-          { "path": "./build/static/js/*.js" },
-          { "path": "./build/static/css/*.css" },
-          { "path": "./build/static/images/*" }
-        ]
-      }
-    }
-  ]
-}
+```yml
+checks:
+  - name: build-size-watcher
+    options:
+      gzip: false
+      files:
+        - path: "./build/static/js/*.js"
+        - path: "./build/static/css/*.css"
+        - path: "./build/static/media/*"
 ```
 
 We specify that we want to track JS, CSS and images. Note that by using wildcards we track correctly
 files with hashes. You might want to tweaks these paths depending on your file structure.
 
+We can dry run our config locally. Just type `yarn codechecks`. You should see something similar to:
+
+![localmode](/images/getting-started/localmode.png)
+
+Notice that each status of the file is "new" because this is the very first time we run codechecks.
+
 We are almost done, last thing is to actually run codechecks as part of your CI pipeline. So far we
 support only CircleCI (travis support is coming soon). Important bit here is that you need to build
-app before running codehecks (so we can measure it's size). You can see sample here:
+app before running codechecks (so we can measure it's size). You can see sample here:
 https://github.com/OasisDEX/eth2dai/blob/4bc1606dfbe0f002261b24fefc0a5c47c0cd950c/.circleci/config.yml#L72
-To run codehecks simple do `yarn codechecks`.
+To run codechecks simple do `yarn codechecks`.
 
-Make sure to add `CC_SECRET` environment variable to your CI secrets. That's it! Push your changes,
-create PR and see how we measure build size. Remeber, this is one of the simplest codechecks,
-imagine all the possibilities! 🔥
+Make sure that you added `CC_SECRET` environment variable to your CI secrets. That's it! Push your
+changes, create PR and see how we measure build size. Remember, this is one of the simplest
+codechecks, imagine all the possibilities! 🔥
