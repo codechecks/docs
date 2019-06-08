@@ -36,5 +36,6 @@ Expect more docs soon...
 1. [Client API reference](client-api.md)
 1. [Localmode](localmode.md)
 1. [Debugging](debugging.md)
+1. [Badges](badges.md)
 1. [FAQ](faq.md)
 1. [Roadmap](roadmap.md)
