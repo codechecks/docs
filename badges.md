@@ -2,16 +2,16 @@
 
 ## Default
 
-![Codechecks](https://github.com/codechecks/docs/blob/master/images/badges/badge-default.svg)
+![Codechecks](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)
 
 ```
-![Codechecks](https://github.com/codechecks/docs/blob/master/images/badges/badge-default.svg)
+![Codechecks](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)
 ```
 
 ## Green
 
-![Codechecks](https://github.com/codechecks/docs/blob/master/images/badges/badge-green.svg)
+![Codechecks](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-green.svg?sanitize=true)
 
 ```
-![Codechecks](https://github.com/codechecks/docs/blob/master/images/badges/badge-green.svg)
+![Codechecks](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-green.svg?sanitize=true)
 ```
