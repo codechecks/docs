@@ -2,8 +2,9 @@
 
 Not in any particular order.
 
-- [ ] Forks supports
-- [ ] Offline mode
+- [x] Forks supports
+- [x] Offline mode
+- [x] Webapp for displaying secrets
 - [ ] Private repos support
-- [ ] Webapp for displaying secrets
+- [ ] Speculative base branch selection when PR doesnt exist yet
 - [ ] Proper Visual Regression codecheck
