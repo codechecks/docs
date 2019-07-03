@@ -1,5 +1,15 @@
 # Getting started
 
+Codechecks is a open source platform for code review automation. It allows to create reusable
+plugins (aka. "codechecks") that can track any metric of your code (like build-size, or test
+coverage) and it integrates directly with GitHub PR flow. A `codecheck` be even more complicated and
+perform for example visual regression between screenshots of the frontend app.
+
+If you want to use already created codecheck, you need to install our GitHub app, setup CI secret,
+drop `codechecks.yml` file into your repository and you're done!
+
+Here's a step by step guide.
+
 First of all, you need to install Github CodeChecks app on repositories that you're interested using
 with CC.
 
