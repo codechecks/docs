@@ -18,15 +18,15 @@ Another important task of API is communication with Github. Codechecks require i
 on repos that you're interested in. This allows us to provide feedback information using GitHub
 Checks API. Support for other services like BitBucket and GitLab is coming soon.
 
-### JS Client aka @codechecks/client
+### JS Client aka `@codechecks/client`
 
 Client (currently written in TypeScript) allows for easy communication with API. It provides
 execution context for plugins by parsing environment variables, getting more information about the
-project from API etc. In future there maybe another implementation, written in something other than
+project from API etc. In future there maybe another implementation, written in other language than
 TypeScript but it's out of scope for now and we threat JS client as the only official
 implementation.
 
 ### Particular checks ex. @codechecks/build-size-watcher
 
-JS client enables to write reusable "plugins" (we call them codechecks) in JS and distribute them
-directly as NPM packages.
+JS client enables to write reusable "plugins" (we call them simply codechecks) in JS and distribute
+them directly as NPM packages.

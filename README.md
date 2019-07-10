@@ -34,7 +34,8 @@ Expect more docs soon...
    1. Testing checks
 1. [How to build X?](how-to-build-X.md)
 1. [Client API reference](client-api.md)
-1. [Localmode](localmode.md)
+1. [Local mode](local-mode.md)
+1. [Supported CI providers](supported-ci.md)
 1. [Debugging](debugging.md)
 1. [Badges](badges.md)
 1. [FAQ](faq.md)
