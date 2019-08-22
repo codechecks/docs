@@ -9,7 +9,7 @@ Not in any particular order.
       [hello@codechecks.io](mailto:hello@codechecks.io))
 - [x] Speculative base branch selection when PR doesnt exist yet
 - [x] Travis CI support
-- [ ] Awesome Codechecks list
+- [x] Awesome Codechecks list
 - [ ] Codechecks ideas:
-  - [ ] Visual Regression codecheck
+  - [x] Visual Regression codecheck
   - [ ] Test coverage like codecov codecheck
