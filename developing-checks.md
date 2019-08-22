@@ -5,11 +5,14 @@ In this tutorial we are gonna build simplified version of
 watch size of a single file and doesn't support gzip. We are gonna use yarn in this tutorial but you
 can pick npm as well. Lets' start!
 
+## Scaffolding
+
 We want our check to be fully reusable so we are gonna create new npm package just for it.
 
 ```sh
 mkdir simple-build-size-watcher
 cd simple-build-size-watcher
+# creates package.json
 yarn init -y
 ```
 
@@ -19,16 +22,23 @@ Let's install codechecks client.
 yarn add --dev @codechecks/client
 ```
 
-Let's start developing index.js file. Our check is just a function that takes a path to a file that
-we want to observe and it a default export of a module.
+Let's start developing `index.js` file. Our check is just a function that takes options object, in
+this example it's a path to a file that we want to observe. The function is a default export of a
+module.
 
 ```js
 const { codechecks } = require("@codechecks/client");
 
-module.exports = function(path) {
-  // it's alive!
+module.exports = function({ path }) {
+  // just print out the path
+  codechecks.success({ name: "Simple build size", shortDescription: path });
 };
 ```
+
+At this point we have already something very simple that should work. To test it we need to create a
+`codechecks.yml` file that actually uses this file.
+
+## Getting real
 
 Lets calculate size of a file pointed by a path. After quick visit at stackoverflow we can come up
 with a function getSize:
@@ -105,7 +115,7 @@ function getSize(path) {
 
 That's it. Whole code is placed in `/example` directory of this repo.
 
-## Testing
+# Testing
 
 Because codechecks client is an external dependency that is supposed to be imported by your modules
 this makes testing a little bit harder. We recommend to use jest mocking super powers. Tests for
@@ -114,7 +124,7 @@ this project are part of `/example` dir.
 You can find more complicated example here:
 https://github.com/codechecks/build-size-watcher/tree/master/src/__tests__
 
-## Debugging
+# Debugging
 
 For compatibility with codechecks client, to provide debug logs use `debug` package with
 `codechecks:YOUR_CHECK_NAME` namespace.
