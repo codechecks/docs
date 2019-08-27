@@ -29,6 +29,7 @@ Expect more docs soon...
 1. [Getting started](getting-started.md)
 1. [How does it work?](how-does-it-work.md)
 1. [Configuration — codechecks.yml/json/ts/js](configuration.md)
+   1. CLI options
 1. [Checks (plugins) development](developing-checks.md)
    1. Developing reusable checks
    1. Testing checks
