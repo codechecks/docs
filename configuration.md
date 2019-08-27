@@ -81,3 +81,8 @@ It's the same as YML config but written in JSON.
 If you want to execute arbitrary logic this is the way to go. The only thing you need to do is
 export async function from your module. We support es6 named export `main`, default export and
 commonjs export.
+
+## CLI
+
+- `--fail-fast` — stops running checks after the first failure, works only in local mode. CLI exits
+  with non-zero code. This might be useful for executing codechecks in precommit hooks.
