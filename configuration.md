@@ -86,3 +86,4 @@ commonjs export.
 
 - `--fail-fast` — stops running checks after the first failure, works only in local mode. CLI exits
   with non-zero code. This might be useful for executing codechecks in precommit hooks.
+- `-x` or `--with-exit-status` - exits the process with exit status according to checks result
